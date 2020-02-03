@@ -1,8 +1,9 @@
 doctype html
 html
   head
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     title
-      | TodayCode
+      | Today's code
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
