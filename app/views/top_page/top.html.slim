@@ -1,20 +1,26 @@
-.top.container
-  .web_title
-    h1.logo Today's code
-    p ​Today's codeは今日のプログラミング学習の進捗を報告しあうサービスです。
-  .three_icon
-    .one
-      i.fa.fa-heart
+.top.container.text-center
+  .web_title.jumbotron.mt-4
+    h1.display-1.logo.font-weight-bolder Today's code
+    p.my-4 ​Today's codeは今日のプログラミング学習の進捗を報告しあうサービスです。
+
+  .three_icon.row
+    .col
+      i.fas.fa-calendar-week
       p.description 連続投稿日数表示機能
-      p.extx 連続で投稿している日数が表示されるので習慣化に役立ちます。
-    .one
-      i.fa.fa-search
+      .row.justify-content-center
+        p.col-8.extx 連続で投稿している日数が表示されるので習慣化に役立ちます。
+    .col
+      i.fas.fa-heart
       p.description いいね、コメント機能
-      p.extx 気に入った投稿にはリアクションできます。
-    .one
-      i.fa.fa-send-o
+      .row.justify-content-center
+        p.col-8.extx 気に入った投稿にはリアクションできます。
+    .col
+      i.fas.fa-user-check
       p.description フォロー機能
-      p.extx フォローして気に入ったユーザーの投稿だけを表示できます。
+      .row.justify-content-center
+        p.col-8.extx フォローして気に入ったユーザーの投稿だけを表示できます。
+
+  = link_to 'みんなの投稿を見てみる', '#', class: 'btn btn-warning rounded-pill btn-lg'
 
 /p.top_p 新規登録をしなくても一部機能を使用できます。
 /- unless member_signed_in?

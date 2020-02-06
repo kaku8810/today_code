@@ -13,3 +13,40 @@
  */
  @import "bootstrap";
  
+ /* 共通 */
+ body{
+   padding-top: 4.5rem;
+ }
+
+ /* トップページ */
+ .jumbotron{
+   background-color: white;
+   margin-bottom: 0px;
+   padding-top: 0px;
+   .logo{
+    font-size: 8rem;
+   }
+ }
+
+ .btn{
+   margin-top: 3rem;
+   color: white;
+ }
+
+ .three_icon{
+  margin-top:0px;
+  .col{
+    .extx{
+      font-size: 1rem;
+      
+    }
+    i{
+      font-size: 5rem;
+    }
+    .description{
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+ }
