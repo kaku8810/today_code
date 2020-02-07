@@ -21,9 +21,4 @@
         p.col-8.extx フォローして気に入ったユーザーの投稿だけを表示できます。
 
   = link_to 'みんなの投稿を見てみる', '#', class: 'btn btn-warning rounded-pill btn-lg'
-
-/p.top_p 新規登録をしなくても一部機能を使用できます。
-/- unless member_signed_in?
-  .link
-    = link_to "新規登録はこちら", new_member_registration_path
-    = link_to "ログインはこちら", new_member_session_path
+  
