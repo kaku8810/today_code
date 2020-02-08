@@ -41,6 +41,7 @@ gem 'slim-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-twitter'
 
 group :development, :test do
