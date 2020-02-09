@@ -53,9 +53,13 @@
 
  /* forms */
 
-input, textarea, select, .uneditable-input {
+input, textarea, select{
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
+}
+
+#user_remember_me{
+  width: auto;
 }
 
