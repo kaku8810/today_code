@@ -41,6 +41,8 @@ gem 'slim-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'omniauth'
 gem 'omniauth-twitter'
 
