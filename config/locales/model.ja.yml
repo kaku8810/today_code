@@ -9,3 +9,4 @@ ja:
         password_confirmation: パスワード(再入力)
         email: メールアドレス
         remember_me: 記憶する
+        username: ユーザー名
