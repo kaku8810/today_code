@@ -1,24 +1,48 @@
-# README
+# Today's code
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+プログラミング学習の進捗を報告するSNSです。
 
-Things you may want to cover:
+## 本番環境
 
-* Ruby version
+https://today-code.work/
 
-* System dependencies
+ログイン画面からテストユーザーでログインが可能です。
 
-* Configuration
+開発環境はdevelopブランチにあります。
 
-* Database creation
+## 機能一覧、使用gemなど
 
-* Database initialization
+- ユーザー登録（確認メール送信）、ログイン機能、パスワード再発行メールなど（device）
+- Twitterログイン機能(omniauth)
+- ユーザープロフィール画像アップロード、削除機能（active storage）
+- ajaxを活用したユーザー間でのフォロー、フォロワー機能
+- ツイート投稿機能(CRUD)
+- ツイート画像投稿機能(carrierwave)
+- ajax`を活用したいいね機能`
+- ツイート一覧表示の際などのページネーション機能(kaminari)
+- *連続投稿日数表示機能
+- 管理者用名前空間での論理削除機能（kakurenbo-puti）
+- フォローしたユーザーのツイートのみを取得するタイムライン機能
 
-* How to run the test suite
+## 使用技術
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby 2.6.5
+- Ruby on Rails 5.2.3
+- MySQL 8
+- SASS,Bootstrap
+- GitHub,Git
+- Rspec
+- AWS
+  - VPC
+  - EC2
+  - RDS for MySQL
+  - ALB
+  - Route53
+  - S3
+  - ACM
 
-* Deployment instructions
+## テスト
 
-* ...
+- Rspec
+  - 単体テスト（モデル）
+  - 統合テスト（systemspec）
