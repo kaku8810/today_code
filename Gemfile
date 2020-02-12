@@ -46,6 +46,7 @@ gem 'devise-i18n-views'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
