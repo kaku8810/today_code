@@ -73,6 +73,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production, :staging do
+group :production do
     gem 'unicorn'
+    gem 'fog'
 end
