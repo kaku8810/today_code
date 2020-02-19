@@ -1,8 +1,6 @@
 p
-  - if @user.image?
-    = image_tag @user.image.url
-  - else
-    = image_tag("/images/icon/no-image.png")
+  = image_tag @user.image.url
+  
 
 p
   = @user.username
