@@ -1,13 +1,19 @@
-p
-  - if @user.image?
-    = image_tag @user.image.thumb100.url
-  - else
-    i.fa.fa-user
-  
-
-p
-  = @user.username
-
+.row
+  aside.col-md-4
+    section.user_info
+      h1
+        - if @user.image?
+          = image_tag @user.image.thumb100.url
+        - else
+          i.fa.fa-user
+        = @user.username
+  .col-md-8
+    - if @user.tweets.any?
+      h3
+        | tweets (#{@user.tweets.count})
+      ol.tweets
+        = render @tweets
+      = paginate @tweets
 
 p
   = link_to 'プロフィールを編集', edit_user_registration_path
