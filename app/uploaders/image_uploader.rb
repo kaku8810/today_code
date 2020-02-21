@@ -3,12 +3,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
   
-  version :thumb do
-    process :resize_to_limit => [300, 300]
+  version :thumb200 do
+    process :resize_to_fit => [200, 200]
   end
    
   version :thumb100 do
-    process :resize_to_limit => [100, 100]
+    process :resize_to_fit => [100, 100]
   end
 
   # Choose what kind of storage to use for this uploader:
