@@ -1,5 +1,8 @@
 p
-  = image_tag @user.image.thumb100.url
+  - if @user.image?
+    = image_tag @user.image.thumb100.url
+  - else
+    i.fa.fa-user
   
 
 p
