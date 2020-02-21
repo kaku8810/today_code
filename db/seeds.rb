@@ -15,3 +15,9 @@ User.create!(username: 'はまた', email: 'example+2@example.com', password: 'p
 User.create!(username: 'たけし', email: 'example+3@example.com', password: 'password', confirmed_at: Time.now)
 
 User.create!(username: 'クロちゃん', email: 'example+4@example.com', password: 'password', confirmed_at: Time.now)
+
+users = User.order(:created_at).take(5)
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.tweets.create!(content: content) }
+end

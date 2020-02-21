@@ -2,10 +2,7 @@
   aside.col-md-4
     section.user_info
       h1
-        - if @user.image?
-          = image_tag @user.image.thumb100.url
-        - else
-          i.fa.fa-user
+        = user_icon
         = @user.username
   .col-md-8
     - if @user.tweets.any?
