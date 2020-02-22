@@ -7,7 +7,7 @@
   .col-md-8
     - if @user.tweets.any?
       h3
-        | tweets (#{@user.tweets.count})
+        | ツイート (#{@user.tweets.count})
       ol.tweets
         = render @tweets
       = paginate @tweets
