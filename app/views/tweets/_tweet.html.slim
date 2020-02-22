@@ -1,6 +1,6 @@
 li id="tweet-#{tweet.id}" 
-  = link_to user_icon, tweet.user
+  = user_icon
   span.user= link_to tweet.user.username, tweet.user
   span.content= tweet.content
   span.timestamp
-    | #{time_ago_in_words(tweet.created_at)} 前の投稿.
+    | #{time_ago_in_words(tweet.created_at)}前

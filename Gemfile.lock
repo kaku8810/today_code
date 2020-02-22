@@ -153,6 +153,9 @@ GEM
     kaminari-activerecord (1.2.0)
       activerecord
       kaminari-core (= 1.2.0)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     kaminari-core (1.2.0)
     kgio (2.11.3)
     listen (3.1.5)
@@ -342,6 +345,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
+  kaminari-bootstrap
   listen (>= 3.0.5, < 3.2)
   mini_magick
   mysql2 (>= 0.4.4, < 0.6.0)
