@@ -1,15 +1,12 @@
-.row
-  aside.col-md-4
-    section.user_info
-      h1
-        = user_icon
-        = @user.username
-    = link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill'
-    
-  .col-md-8
-    - if @user.tweets.any?
-      h3
-        | ツイート (#{@user.tweets.count})
-      ol.tweets
-        = render @tweets
-      = paginate @tweets
+section.user_info
+  h1
+    = user_icon
+    = @user.username
+= link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill'
+
+- if @user.tweets.any?
+  h3
+    | ツイート (#{@user.tweets.count})
+  ol.tweets
+    = render @tweets
+  = paginate @tweets
