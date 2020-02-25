@@ -9,6 +9,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'shared/header'
-    = render 'shared/flash'
     .container
-      = yield
+      .row
+        aside.col-md-2.fixed-left
+          =render "shared/sidebar"
+        main.ten.col-md-10
+          = render 'shared/flash'
+          = yield

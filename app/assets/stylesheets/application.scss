@@ -94,16 +94,43 @@ input, textarea, select{
   }
 }
 
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
 span.picture {
   margin-top: 10px;
   input {
     border: 0;
+  }
+}
+
+/* sidebar */
+aside{
+  box-sizing: border-box;
+  ul{
+    margin: 5px 0 0 0;
+    padding: 2px;
+    box-sizing: border-box;
+    
+    li{
+      list-style: none;
+      padding: 0px;
+      margin:15px 0 30px 0;
+      font-size: 1.1rem;
+      // transform: scale( 1 , 1.2 );
+      .list{
+        padding: 2px 8px 2px;
+        margin: 0 5px 0;
+      }
+      a{
+        color: black;
+      }
+      @media(min-width:769px){
+        &:hover{
+          background-color: darken(white,3%);
+          border-radius: 10px;
+          a{
+            text-decoration: none;
+          }
+        }  
+      }
+    }
   }
 }
