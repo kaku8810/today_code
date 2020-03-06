@@ -1,7 +1,8 @@
-class tweetsController < ApplicationController
+class TweetsController < ApplicationController
   before_action :authenticate_user! 
 
   def new
+    @tweet = current_user.tweets.build if user_signed_in?
   end
 
   def create
@@ -10,7 +11,7 @@ class tweetsController < ApplicationController
       flash[:success] = "tweet created!"
       redirect_to root_url
     else
-      render 'top_page/top'
+      render 'tweets/new'
     end
   end
 

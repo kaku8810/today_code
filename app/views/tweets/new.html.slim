@@ -1,0 +1,11 @@
+section.user_info
+  h1.user_name
+    = user_icon
+    = current_user.username
+
+section.tweet_form
+  = form_for(@tweet) do |f|
+    = render 'shared/error_messages', object: f.object
+    .field
+      = f.text_area :content, placeholder: "ツイート内容を入力"
+    = f.submit "ツイート", class: "btn btn-warning"
