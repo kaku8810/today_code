@@ -1,5 +1,9 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user! 
+  before_action :authenticate_user!, except: :index
+
+  def index
+    
+  end
 
   def new
     @tweet = current_user.tweets.build if user_signed_in?
