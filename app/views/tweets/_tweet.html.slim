@@ -1,10 +1,8 @@
 li id="tweet-#{tweet.id}" 
-  
   - if tweet.user.image?
     = image_tag tweet.user.image.thumb100.url
   - else
     i.fa.fa-user
-
   span.user= link_to tweet.user.username, tweet.user
   span.content= tweet.content
   span.timestamp

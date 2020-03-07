@@ -1,6 +1,9 @@
 section.user_info
   h1.user_name
-    = user_icon
+    - if current_user.image?
+      = image_tag current_user.image.thumb100.url
+    - else
+      i.fa.fa-user
     = @user.username
   = link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill show-btn'
 

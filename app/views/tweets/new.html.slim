@@ -1,6 +1,9 @@
 section.user_info
   h1.user_name
-    = user_icon
+    - if current_user.image?
+      = image_tag current_user.image.thumb100.url
+    - else
+      i.fa.fa-user
     = current_user.username
 
 section.tweet_form
