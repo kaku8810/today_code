@@ -24,5 +24,9 @@ class User < ApplicationRecord
       super
     end
   end
+
+  def feed
+    Tweet.where("user_id = ?", id)
+  end
   
 end

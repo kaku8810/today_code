@@ -1,6 +1,10 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: :index
 
+  def home
+    @feed_items = current_user.feed.page(params[:page]).per(10)
+  end
+
   def index
     @tweets = Tweet.order(created_at: :desc).page(params[:page]).per(10)
   end

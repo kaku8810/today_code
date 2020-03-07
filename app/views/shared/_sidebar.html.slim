@@ -2,7 +2,7 @@
   ul
     - if user_signed_in?
       li
-        = link_to '#', class: 'top' do 
+        = link_to home_tweets_path, class: 'top' do 
           .list
             i.fa.fa-home 　ホーム
     - else
