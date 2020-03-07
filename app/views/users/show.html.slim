@@ -1,9 +1,9 @@
 section.user_info
   h1.user_name
     - if current_user.image?
-      = image_tag current_user.image.thumb100.url
+      = image_tag current_user.image.thumb48.url, class: 'user_icon'
     - else
-      i.fa.fa-user
+      i.fa.fa-user.user_icon
     = @user.username
   = link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill show-btn'
 

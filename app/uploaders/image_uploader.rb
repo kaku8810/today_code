@@ -11,6 +11,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [100, 100]
   end
 
+  version :thumb48 do
+    process :resize_to_fit => [48, 48]
+  end
+
+
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
     storage :fog
