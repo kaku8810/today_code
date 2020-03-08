@@ -4,7 +4,9 @@ li id="tweet-#{tweet.id}"
   - else
     i.fa.fa-user.user_icon
   span.user= link_to tweet.user.username, tweet.user
-  span.content= tweet.content
+  span.content
+    = tweet.content
+    = image_tag tweet.picture.url if tweet.picture?
   span.timestamp
     | #{time_ago_in_words(tweet.created_at)}前
     - if current_user?(tweet.user)

@@ -11,4 +11,7 @@ section.tweet_form
     = render 'shared/error_messages', object: f.object
     .field
       = f.text_area :content, placeholder: "ツイート内容を入力"
+    span.picture
+      = f.file_field :picture
     = f.submit "ツイート", class: "btn btn-warning"
+
