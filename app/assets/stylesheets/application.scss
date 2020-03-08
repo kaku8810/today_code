@@ -18,19 +18,22 @@
    padding-top: 4.5rem;
  }
 
+ .btn{
+   color: white;
+ }
+
  /* トップページ */
  .jumbotron{
    background-color: white;
    margin-bottom: 0px;
    padding-top: 0px;
    .logo{
-    font-size: 8rem;
+    font-size: 7.5rem;
    }
  }
 
- .btn{
+ .top-btn{
    margin-top: 3rem;
-   color: white;
  }
 
  .three_icon{
@@ -63,3 +66,86 @@ input, textarea, select{
   width: auto;
 }
 
+/* tweets */
+
+.user_info{
+  margin-bottom: 50px;
+}
+.user_name{
+  display: inline;
+}
+.show-btn{
+  float: right;
+}
+.tweets {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: #777;
+    display: block;
+    margin-left: 60px;
+  }
+  .user_icon{
+    font-size: 3rem;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+/* sidebar */
+aside{
+  box-sizing: border-box;
+  ul{
+    margin: 5px 0 0 0;
+    padding: 2px;
+    box-sizing: border-box;
+    
+    li{
+      list-style: none;
+      padding: 0px;
+      margin:15px 0 30px 0;
+      font-size: 1.1rem;
+      // transform: scale( 1 , 1.2 );
+      .list{
+        padding: 2px 8px 2px;
+        margin: 0 5px 0;
+      }
+      a{
+        color: black;
+      }
+      @media(min-width:769px){
+        &:hover{
+          background-color: darken(white,3%);
+          border-radius: 10px;
+          a{
+            text-decoration: none;
+          }
+        }  
+      }
+    }
+  }
+}

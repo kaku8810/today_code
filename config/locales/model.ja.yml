@@ -10,3 +10,11 @@ ja:
         email: メールアドレス
         remember_me: 記憶する
         username: ユーザー名
+    
+ja:
+  activerecord:
+    models:
+      tweet: ツイート
+    attributes:
+      tweet:
+        content: ツイート内容

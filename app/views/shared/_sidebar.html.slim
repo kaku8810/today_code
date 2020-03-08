@@ -1,0 +1,33 @@
+.global-nav.sp_slide
+  ul
+    - if user_signed_in?
+      li
+        = link_to home_tweets_path, class: 'top' do 
+          .list
+            i.fa.fa-home 　ホーム
+    - else
+      li
+        = link_to root_path, class: 'top' do 
+          .list
+            i.fa.fa-home 　ホーム
+    li
+      = link_to tweets_path, class: "tweet" do
+        .list
+          i.fa.fa-comments 　投稿一覧
+    li
+        =link_to '#', class: "popularity" do
+          .list
+            i.fa.fa-signal 　ランキング
+    - if user_signed_in?
+      li
+        =link_to '#', class: "favorite" do
+          .list
+            i.fa.fa-heart 　いいね
+      li
+        =link_to user_path(id: current_user.id), class: "follower" do
+          .list
+            i.fas.fa-user-circle 　マイページ
+      li
+        =link_to new_tweet_path, class: "post_tweet" do
+          .list
+            i.fas.fa-comment-alt 　投稿する

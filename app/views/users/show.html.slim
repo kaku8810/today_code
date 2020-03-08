@@ -1,12 +1,15 @@
-p
-  - if @user.image?
-    = image_tag @user.image.url
-  - else
-    = image_tag("/images/icon/no-image.png")
+section.user_info
+  h1.user_name
+    - if current_user.image?
+      = image_tag current_user.image.thumb48.url, class: 'user_icon'
+    - else
+      i.fa.fa-user.user_icon
+    = @user.username
+  = link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill show-btn'
 
-p
-  = @user.username
-
-
-p
-  = link_to 'プロフィールを編集', edit_user_registration_path
+- if @user.tweets.any?
+  h3
+    | ツイート (#{@user.tweets.count})
+  ol.tweets
+    = render @tweets
+  = paginate @tweets
