@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :tweets, only: [:index, :new, :create, :destroy] do
     get 'home', on: :collection
   end
+  resources :relationships,       only: [:create, :destroy]
   
 end

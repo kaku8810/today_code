@@ -5,7 +5,25 @@ section.user_info
     - else
       i.fa.fa-user.user_icon
     = @user.username
-  = link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill show-btn'
+  - if current_user?(@user)
+    = link_to 'プロフィールを編集', edit_user_registration_path, class: 'btn btn-warning rounded-pill show-btn'
+  - else
+    #follow_form
+      - if current_user.following?(@user)
+        = render 'unfollow'
+      - else
+        = render 'follow'
+
+  .stats
+    a href="#{following_user_path(@user)}" 
+      strong#following.stat
+        = @user.following.count
+      | フォロー 
+    a href="#{followers_user_path(@user)}" 
+      strong#followers.stat
+        = @user.followers.count
+      | フォロワー
+
 
 - if @user.tweets.any?
   h3
