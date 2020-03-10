@@ -1,0 +1,23 @@
+section.user_info
+  h1.user_name
+    - if current_user.image?
+      = image_tag current_user.image.thumb48.url, class: 'user_icon'
+    - else
+      i.fa.fa-user.user_icon
+    = @user.username
+ 
+  .stats
+    a href="#{following_user_path(@user)}" 
+      strong#following.stat
+        = @user.following.count
+      | フォロー 
+    a href="#{followers_user_path(@user)}" 
+      strong#followers.stat
+        = @user.followers.count
+      | フォロワー
+
+h3= @title
+- if @users.any?
+  ul.users.follow
+    = render @users
+  = paginate @users
