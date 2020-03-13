@@ -1,0 +1,6 @@
+li
+  - if user.image?
+    = image_tag user.image.thumb48.url, class: 'user_icon'
+  - else
+    i.fa.fa-user.user_icon
+  = link_to user.username, user
