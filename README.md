@@ -1,19 +1,16 @@
 # Today's code
 
-プログラミング学習の進捗を報告するSNSです。
-
-## 本番環境
-
 https://today-code.work/
 
-ログイン画面からテストユーザーでログインが可能です。
+プログラミング学習の進捗を報告するSNSです。
 
+ログイン画面からテストユーザーでログインが可能です。
 
 ## 機能一覧、使用gemなど
 
 - ユーザー登録（確認メール送信）、ログイン機能、パスワード再発行メールなど（device）
 - Twitterログイン機能(omniauth)
-- ユーザープロフィール画像アップロード、削除機能（carrierwave）
+- ユーザープロフィール画像アップロード機能（carrierwave）
 - ajaxを活用したユーザー間でのフォロー、フォロワー機能
 - ツイート投稿機能(CRUD)
 - ツイート画像投稿機能(carrierwave)
@@ -23,12 +20,13 @@ https://today-code.work/
 
 ## 使用技術
 
+### 開発環境
 - Ruby 2.6.5
 - Ruby on Rails 5.2.3
 - MySQL 8
-- SASS,Bootstrap
-- GitHub,Git
-- Rspec
+- Git,GitHub(Git-flowによる開発)
+
+### インフラ
 - AWS
   - VPC
   - EC2
@@ -37,9 +35,14 @@ https://today-code.work/
   - Route53
   - S3
   - ACM
+- Nginx
+- unicorn
 
-## テスト
+### フロントエンド
+- Slim
+- SASS,Bootstrap4
 
+### テスト
 - Rspec
   - 単体テスト（モデル）
   - 統合テスト（systemspec）
