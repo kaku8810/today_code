@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :tweet do
-    content { "MyText" }
+    content { "これはテストです" }
     user { nil }
   end
 end
