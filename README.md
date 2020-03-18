@@ -20,12 +20,6 @@ https://today-code.work/
 
 ## 使用技術
 
-### 開発環境
-- Ruby 2.6.5
-- Ruby on Rails 5.2.3
-- MySQL 8
-- Git,GitHub(Git-flowによる開発)
-
 ### インフラ
 - AWS
   - VPC
@@ -37,6 +31,11 @@ https://today-code.work/
   - ACM
 - Nginx
 - unicorn
+
+### バックエンド
+- Ruby 2.6.5
+- Ruby on Rails 5.2.3
+- MySQL 8
 
 ### フロントエンド
 - Slim
