@@ -14,16 +14,8 @@
       = link_to tweets_path, class: "tweet" do
         .list
           i.fa.fa-comments 　投稿一覧
-    li
-        =link_to '#', class: "popularity" do
-          .list
-            i.fa.fa-signal 　ランキング
-    - if user_signed_in?
-      li
-        =link_to '#', class: "favorite" do
-          .list
-            i.fa.fa-heart 　いいね
-      li
+   - if user_signed_in?
+     li
         =link_to user_path(id: current_user.id), class: "follower" do
           .list
             i.fas.fa-user-circle 　マイページ
