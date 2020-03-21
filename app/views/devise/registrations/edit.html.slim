@@ -44,8 +44,8 @@ h2
   .actions
     = f.submit "Update"
 h3
-  | Cancel my account
+  | アカウント削除
 p
   | Unhappy? 
-  = button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete
+  = button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete
 = link_to "Back", :back
