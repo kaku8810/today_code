@@ -9,7 +9,6 @@ https://today-code.work/
 ## 機能一覧、使用gemなど
 
 - ユーザー登録（確認メール送信）、ログイン機能、パスワード再発行メールなど（device）
-- Twitterログイン機能(omniauth)
 - ユーザープロフィール画像アップロード機能（carrierwave）
 - ajaxを活用したユーザー間でのフォロー、フォロワー機能
 - ツイート投稿機能(CRUD)
