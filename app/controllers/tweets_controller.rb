@@ -10,6 +10,10 @@ class TweetsController < ApplicationController
     @tweets = Tweet.order(created_at: :desc).page(params[:page]).per(10)
   end
 
+  def ranks
+    @ranks = Tweet.unscoped.find(Like.group(:tweet_id).order('count(tweet_id) desc').limit(10).pluck(:tweet_id))
+  end
+
   def new
     @tweet = current_user.tweets.build if user_signed_in?
   end

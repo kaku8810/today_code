@@ -10,6 +10,10 @@
           .list
             i.fa.fa-comments 　投稿一覧
       li
+        = link_to ranks_tweets_path
+          .list
+            i.fas.fa-trophy　人気投稿
+      li
         =link_to user_path(id: current_user.id), class: "follower" do
           .list
             i.fas.fa-user-circle 　マイページ
