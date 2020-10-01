@@ -11,8 +11,5 @@ li id="tweet-#{tweet.id}"
     | #{time_ago_in_words(tweet.created_at)}前
     - if current_user?(tweet.user)
       = link_to " 削除", tweet, method: :delete,data: { confirm: "ツイートを削除しますか？" }
-  span.like
-    -if user_signed_in?
-      -if
-      
-      -else
+    div id="like-btn-#{tweet.id}"
+      = render 'likes/like', tweet: tweet

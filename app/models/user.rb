@@ -56,4 +56,8 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
   
+  def liked_by?(tweet_id)
+    likes.where(tweet_id: tweet_id).exists?
+  end
+
 end
