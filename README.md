@@ -39,11 +39,15 @@ https://today-code.work/
 ### バックエンド
 - Ruby 2.6.5
 - Ruby on Rails 5.2.3
-- MySQL 8
+- MySQL 5.7
 
 ### フロントエンド
 - Slim
 - SASS,Bootstrap4
+
+### 開発環境
+- Docker,Docker Compose
+- Git,GitHub(github flowによる開発)
 
 ### テスト
 - Rspec
