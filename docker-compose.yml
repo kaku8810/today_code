@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    ports: 
+      - '3306:3306' # ホストからゲストへポートフォワード
+    environment:
+      MYSQL_DATABASE: today_code_development
+      MYSQL_ROOT_PASSWORD: ${DATABASE_DEV_PASSWORD}
+      MYSQL_USER: ${DATABASE_DEV_USER}
+      MYSQL_PASSWORD: ${DATABASE_DEV_PASSWORD}
+
+  test-db:
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    environment:
+      MYSQL_DATABASE: today_code_test
+      MYSQL_ROOT_PASSWORD: ${DATABASE_DEV_PASSWORD}
+      MYSQL_USER: ${DATABASE_DEV_USER}
+      MYSQL_PASSWORD: ${DATABASE_DEV_PASSWORD}
+    ports:
+      - '3307:3306' # ローカルPCから接続するために設定
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    tty: true 
+    stdin_open: true
+    depends_on:
+      - db
+      - test-db # DB側のコンテナが出来上がってからwebを実行する
+    ports:
+      - "3000:3000" # ホストからゲストへポートフォワード
+    volumes:
+      - .:/today_code # ソースコード変更したらDocker側も即反映されるように
+      - bundle:/usr/local/bundle    #bundle installした後buildし直さなくてよくなる
+    links:
+      - db
+      - test-db
+
+volumes:
+  bundle:
