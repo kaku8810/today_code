@@ -5,7 +5,7 @@ RSpec.describe Tweet, type: :model do
     @user = FactoryBot.create(:user)
   end
 
-  it 'user_idとaがあれば有効' do
+  it 'user_idとcontentがあれば有効' do
     user = @user
     tweet = user.tweets.build(
       content: '佐々木希',
