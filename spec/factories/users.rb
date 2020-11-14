@@ -6,7 +6,7 @@ FactoryBot.define do
     confirmed_at { Time.now }
   end
 
-  factory :otheruser do
+  factory :other_user do
     username { 'テストユーザー2' }
     email { 'test2@example.com'}
     password { 'password' }
