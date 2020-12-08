@@ -1,6 +1,6 @@
 # Today's code
 
-https://today-code.work/
+https://www.today-code.work/
 
 プログラミング学習の進捗を報告するSNSです。
 
