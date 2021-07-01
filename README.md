@@ -1,6 +1,7 @@
 # Today's code
 
 https://www.today-code.work/
+*現在AWS料金の都合上本番環境は停止しています。2
 
 プログラミング学習の進捗を報告するSNSです。
 
