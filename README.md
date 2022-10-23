@@ -7,6 +7,9 @@ https://www.today-code.work/
 
 ログイン画面の「かんたんログイン」からテストユーザーでログインしていただくとすべての機能が利用可能です。
 
+![todaycode](https://user-images.githubusercontent.com/59243400/197383229-64fc37b9-551f-4512-8702-6923dcd32afe.jpeg)
+
+
 
 ## 機能一覧、使用gemなど
 
